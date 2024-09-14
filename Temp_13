@@ -1,0 +1,33 @@
+def calcular_temperatura_promedio(datos):
+    """
+    Calcula la temperatura promedio de múltiples ciudades durante un periodo de tiempo.
+    :param datos: Diccionario con las temperaturas de varias ciudades.
+    :return: Diccionario con la temperatura promedio por ciudad.
+    """
+    promedios = {}
+    for ciudad, temperaturas in datos.items():
+        promedio = sum(temperaturas) / len(temperaturas)
+        promedios[ciudad] = promedio
+    return promedios
+
+# Ejemplo de uso
+datos = {
+    'Ciudad A': [20, 22, 24, 21],
+    'Ciudad B': [15, 18, 19, 16],
+    'Ciudad C': [25, 27, 24, 26]
+}
+
+promedios = calcular_temperatura_promedio(datos)
+print("Resultados del ejemplo:")
+print(promedios)
+
+# Prueba adicional
+datos_prueba = {
+    'Ciudad D': [30, 32, 31, 29],
+    'Ciudad E': [20, 22, 19, 23],
+    'Ciudad F': [15, 17, 16, 18]
+}
+
+resultados_prueba = calcular_temperatura_promedio(datos_prueba)
+print("\nResultados de la prueba adicional:")
+print(resultados_prueba)
