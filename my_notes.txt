@@ -1,0 +1,14 @@
+# Escribir y leer un archivo de texto llamado 'my_notes.txt'
+
+# Escribimos las notas en el archivo
+with open('my_notes.txt', 'w') as file:
+    file.write('Nota 1: Aprender Python es divertido.\n')
+    file.write('Nota 2: La práctica hace al maestro.\n')
+    file.write('Nota 3: Siempre es bueno tomar notas.\n')
+
+print("Contenido del archivo 'my_notes.txt':")
+
+# Leemos el contenido del archivo y lo mostramos en la consola
+with open('my_notes.txt', 'r') as file:
+    for line in file:
+        print(line.strip())
